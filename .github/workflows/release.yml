@@ -22,6 +22,11 @@ jobs:
       with:
         node-version-file: '.nvmrc'
 
+    - name: Setup GitHub Pages
+      run: |
+        git config --global user.email "blcsntb@gmail.com"
+        git config --global user.name "Binh Nguyen"
+
     - name: Release
       run: yarn && yarn deploy
 
